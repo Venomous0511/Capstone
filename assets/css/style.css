@@ -155,13 +155,14 @@ nav .logo {
     align-items: center;
     justify-content: center;
     height: 100%;
+    margin-top: 3rem;
 }
 
 .header .header-title img {
     display: block;
     margin: 0 auto;
     width: 600px;
-    height: 300px;
+    height: 500px;
 }
 
 .header .header-subtitle img {

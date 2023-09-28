@@ -1,99 +1,59 @@
-*{
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Lobster&display=swap');
+
+/* Modifier */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color:#1F1D36;
-    background: url("../images/bgo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+a {
+    text-decoration: none;
 }
 
-.nav-menu:before,
-.nav-menu:after{
-    content: " ";
-    display: table;
-}
-
-.nav-menu:after{
-    clear: both;
-}
-
-nav{
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    background: linear-gradient(rgb(47, 47, 185), green);
-    width: 100%;
-    height: 55px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-}
-
-.menu, .submenu{
-    margin: 0;
-    padding: 0;
+ul {
     list-style: none;
 }
 
-.logo{
+/* Navigation Bar */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgb(47, 47, 185), green);
+    width: 100%;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
-}
-.logo h1{
-    margin-left: 15px;
-    font-size: 2.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-    color: skyblue;
+    justify-content: space-between;
 }
 
-.logo img{
-    margin-left: 0;
-    margin-top: 10px;
-    width: 50px;
-    height: 40px;
+nav .logo {
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #00fff2;
+    margin-left: 3rem;
 }
 
-.menu{
-    margin: 0px auto;
-    margin-top: 5px;
-    margin-right: 21px;
-    width: 800px;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    width: fit-content;
+.menu li {
+    background: rgb(1, 145, 1);
+    display: inline-flex;
+    transform: skewX(-25deg);
+    margin: auto;
+    padding: 5px;
 }
 
-.menu > li{
-    background: rgb(1, 90, 1);
-    float: left;
-    position: relative;
-    transform: skewX(25deg);
+.menu li:last-child {
+    margin-right: 3rem;
 }
 
-.menu a{
-    display: block;
-    color: lightblue;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: center;
-}
-
-.menu li:hover{
+.menu li:hover {
     background: rgb(42, 164, 194);
 }
 
-.menu > li > a {
-    transform: skewX(-25deg);
+.menu li a {
+    transform: skewX(25deg);
     padding: 1em 2em;
 }
 
@@ -107,17 +67,17 @@ nav{
     transform-origin: left top;
 }
 
-.menu-item li{
+.menu-item li {
     background-color: #1360acbe;
     position: relative;
     overflow: hidden;
 }
 
-.menu-item > li > a{
+.menu-item>li>a {
     padding: 1em 2em;
 }
 
-.menu-item > li::after {
+.menu-item>li::after {
     content: '';
     position: absolute;
     top: -125%;
@@ -126,53 +86,54 @@ nav{
     box-shadow: 0 0 50px rgba(0, 0, 0, -9);
 }
 
-.menu-item > li:nth-child(odd){
+.menu-item>li:nth-child(odd) {
     transform: skewX(-25deg) translateX(0);
 }
 
-.menu-item > li:nth-child(odd) a {
+.menu-item>li:nth-child(odd) a {
     transform: skewX(25deg);
 }
 
-.menu-item > li:nth-child(odd)::after {
+.menu-item>li:nth-child(odd)::after {
     right: -50%;
     transform: skewX(-25deg) rotate(3deg);
 }
 
-.menu-item > li:nth-child(even){
+.menu-item>li:nth-child(even) {
     transform: skewX(25deg) translate(0);
 }
 
-.menu-item > li:nth-child(even) > a{
+.menu-item>li:nth-child(even)>a {
     transform: skewX(-25deg);
 }
 
-.menu-item > li:nth-child(even)::after{
+.menu-item>li:nth-child(even)::after {
     left: -50%;
     transform: skewX(25deg) rotate(3deg);
 }
 
 /* Show dropdown */
-.menu-item, .menu-item li{
+.menu-item,
+.menu-item li {
     opacity: 0;
     visibility: hidden;
 }
 
-.menu-item li{
+.menu-item li {
     transition: 0.2s ease transform;
 }
 
-.menu > li:hover .menu-item,
-.menu > li:hover .menu-item li{
+.menu>li:hover .menu-item,
+.menu>li:hover .menu-item li {
     opacity: 1;
     visibility: visible;
 }
 
-.menu > li:hover .menu-item li:nth-child(even){
+.menu>li:hover .menu-item li:nth-child(even) {
     transform: skewX(25deg) translateX(15px);
 }
 
-.menu > li:hover .menu-item li:nth-child(odd){
+.menu>li:hover .menu-item li:nth-child(odd) {
     transform: skewX(-25deg) translateX(-15px);
 }
 
@@ -184,28 +145,28 @@ nav{
     height: 100vh;
     margin-top: 50px;
 }
-  
+
 .intro-text .slider-container {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-  
+
 .intro-text h2 img {
     margin-top: 200px;
     align-items: center;
     width: 400px;
     height: 200px;
 }
-  
+
 .intro-text h1 img {
     width: 900px;
     height: 100%;
 }
-  
 
-.slider-container{
+
+.slider-container {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -214,37 +175,37 @@ nav{
     justify-content: center;
 }
 
-.slider{
-    width: 800px;   
-    height: 500px;    
+.slider {
+    width: 800px;
+    height: 500px;
     margin-right: 20px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.slides{
+.slides {
     width: 500%;
     height: 500px;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
-.slide{
+.slide {
     width: 20%;
     transition: 2s;
 }
 
-.slide img{
+.slide img {
     width: 800px;
     height: 500px;
 }
 
 /* css manual navigation */
 
-.navigation-manual{
+.navigation-manual {
     position: absolute;
     width: 800px;
     margin-top: -40px;
@@ -252,7 +213,7 @@ nav{
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid skyblue;
     padding: 5px;
     border-radius: 10px;
@@ -260,37 +221,37 @@ nav{
     transition: 1s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background: blue;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked~.first {
     margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked~.first {
     margin-left: -40%;
 }
 
-#radio4:checked ~ .first{
+#radio4:checked~.first {
     margin-left: -60%;
 }
 
-#radio5:checked ~ .first{
+#radio5:checked~.first {
     margin-left: -80%;
 }
 
 /* css for auto navigation */
 
-.navigation-auto{
+.navigation-auto {
     position: absolute;
     display: flex;
     width: 800px;
@@ -298,38 +259,38 @@ nav{
     margin-top: 460px;
 }
 
-.navigation-auto div{
+.navigation-auto div {
     border: 2px solid skyblue;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked .navigation-auto .auto-btn1{
+#radio1:checked .navigation-auto .auto-btn1 {
     background: blue;
-}   
+}
 
-#radio2:checked .navigation-auto .auto-btn2{
-    background: skyblue;
-}   
-
-#radio3:checked .navigation-auto .auto-btn3{
-    background: skyblue;
-}   
-
-#radio4:checked .navigation-auto .auto-btn4{
-    background: skyblue;
-}   
-
-#radio5:checked .navigation-auto .auto-btn5{
+#radio2:checked .navigation-auto .auto-btn2 {
     background: skyblue;
 }
 
-footer{
+#radio3:checked .navigation-auto .auto-btn3 {
+    background: skyblue;
+}
+
+#radio4:checked .navigation-auto .auto-btn4 {
+    background: skyblue;
+}
+
+#radio5:checked .navigation-auto .auto-btn5 {
+    background: skyblue;
+}
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,14 +298,4 @@ footer{
     font-weight: 900;
     height: 50px;
     background: linear-gradient(90deg, blue, limegreen, green);
-}
-
-@media screen and (max-width: 2560px) {
-    .slider-container{
-        max-height: 100vh;
-    }
-
-}
-@media screen and (max-width: 1440px) {
-    
 }

@@ -11,6 +11,9 @@
 
 body {
     overflow: hidden;
+    background-image: url('../images/bgo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
@@ -133,3 +136,33 @@ nav .logo {
 }
 
 /* SECTION */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 50%;
+    padding: 2rem;
+    border: 1px solid black;
+}
+
+.header {
+    text-align: center;
+}
+
+
+.swiper {
+    width: 900px;
+    height: 750px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FOOTER */
+footer {
+    background: linear-gradient(rgb(47, 47, 185), green);
+    padding: 15px 0 5px 0;
+    text-align: center;
+}

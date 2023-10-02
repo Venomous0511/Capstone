@@ -9,19 +9,8 @@
     scroll-behavior: smooth;
 }
 
-.page-container {
+body {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-section {
-    background-image: url('../images/bgo.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: 1;
 }
 
 a {
@@ -144,39 +133,3 @@ nav .logo {
 }
 
 /* Section */
-.container {
-    display: grid;
-    grid-template-rows: 2fr 50%;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin-top: 3rem;
-}
-
-.header .header-title img {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
-}
-
-.header .header-subtitle img {
-    display: block;
-    margin: 0 auto;
-    width: 800px;
-    height: 500px;
-}
-
-
-/* Footer */
-footer {
-    background: linear-gradient(rgb(47, 47, 185), green);
-    color: #ffffff;
-    text-align: center;
-    padding: 17px;
-}

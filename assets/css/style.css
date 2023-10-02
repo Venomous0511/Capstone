@@ -147,27 +147,21 @@ nav .logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: -5px 4px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: -8px 4px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 7rem;
     text-transform: uppercase;
-    color: #00fff2;
+    color: #0026ff;
 }
 
 .header-subtitle {
     font-family: 'Lobster', sans-serif;
     font-size: 5rem;
-    color: #00fff2;
+    color: #0026ff;
 }
-
-.swiper {
-    width: 600px;
-    height: 300px;
-}
-
 
 /* FOOTER */
 footer {

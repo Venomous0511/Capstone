@@ -58,14 +58,14 @@ nav .logo {
     background: rgb(0, 204, 255);
 }
 
-.menu li a {
+.menu li .main-menu {
     transform: skewX(25deg);
     font-size: 1rem;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     color: #ffffff;
     padding: 1em 2em;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .menu li a:hover {
@@ -76,8 +76,8 @@ nav .logo {
 .menu-item {
     position: absolute;
     top: 3.6rem;
-    left: 2rem;
-    transform: skewX(25deg);
+    left: 1.5rem;
+    transform: skewX(15deg);
 }
 
 .menu-item li {
@@ -86,29 +86,11 @@ nav .logo {
 }
 
 .menu-item li .dropdown {
-    padding: 1em 3em;
+    padding: 1rem 2rem;
     text-transform: uppercase;
-}
-
-.menu-item li:nth-child(odd) {
-    transform: skewX(25deg) translateX(0);
-}
-
-.menu-item li:nth-child(odd) a {
-    transform: skewX(25deg);
-}
-
-.menu-item li:nth-child(odd)::after {
-    right: -50%;
-    transform: skewX(25deg) rotate(3deg);
-}
-
-.menu-item li:nth-child(even) {
-    transform: skewX(25deg) translate(0);
-}
-
-.menu-item li:nth-child(even)>a {
-    transform: skewX(-25deg);
+    transform: skewX(30deg);
+    color: #ffffff;
+    font-family: 'Baloo Da 2', cursive;
 }
 
 /* SHOW DROPDOWN MENU */
@@ -119,21 +101,13 @@ nav .logo {
 }
 
 .menu-item li {
-    transition: 0.2s ease transform;
+    transition: .2s ease-in-out;
 }
 
-.menu>li:hover .menu-item,
-.menu>li:hover .menu-item li {
+.menu li:hover .menu-item,
+.menu li:hover .menu-item li {
     opacity: 1;
     visibility: visible;
-}
-
-.menu>li:hover .menu-item li:nth-child(even) {
-    transform: skewX(25deg) translateX(15px);
-}
-
-.menu>li:hover .menu-item li:nth-child(odd) {
-    transform: skewX(-25deg) translateX(-15px);
 }
 
 /* SECTION */
@@ -167,7 +141,7 @@ nav .logo {
 /* FOOTER */
 footer {
     background: linear-gradient(rgb(47, 47, 185), green);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;

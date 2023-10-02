@@ -1,7 +1,7 @@
-/* Google Font */
+/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Lobster&display=swap');
 
-/* Modifier */
+/* MODIFIER */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +21,7 @@ ul {
     list-style: none;
 }
 
-/* Navigation Bar */
+/* NAVIGATION BAR */
 nav {
     background: linear-gradient(rgb(47, 47, 185), green);
     padding: 15px 0 5px 0;
@@ -68,7 +68,7 @@ nav .logo {
     color: #000000;
 }
 
-/* Dropdown */
+/* DROPDOWN MENU */
 .menu-item {
     position: absolute;
     top: 3.6rem;
@@ -107,7 +107,7 @@ nav .logo {
     transform: skewX(-25deg);
 }
 
-/* Show dropdown */
+/* SHOW DROPDOWN MENU */
 .menu-item,
 .menu-item li {
     opacity: 0;
@@ -131,3 +131,5 @@ nav .logo {
 .menu>li:hover .menu-item li:nth-child(odd) {
     transform: skewX(-25deg) translateX(-15px);
 }
+
+/* SECTION */

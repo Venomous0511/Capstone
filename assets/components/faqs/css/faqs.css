@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +10,7 @@
 
 body{
     background-color:#1F1D36;
-    background: url("../../../images/bgo.png");
+    background: url("image/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -176,36 +180,96 @@ nav{
     transform: skewX(-25deg) translateX(-15px);
 }
 
-.selection {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+/* card container */
+
+.sides{
+    margin-top: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
-.left, .center, .right{
-    display: inline-flex;
+.maincontainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-style:ridge;
+    border-color: aqua;
+    border-radius: 20px;
+    justify-content: center;
+    width: 320px;
+    height: 400px;
+    margin: 1rem;
+}
+
+/* card form */
+
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    cursor: cell;
+}
+
+/* flip click function */
+
+.card-clicked{
+    transform: rotateY(180deg);
+}
+
+/* front face card */
+
+.front{
+    text-transform: capitalize;
+    position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(21, 121, 1, 0.507);
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 30%;
-    height: 250px;
-    border: inset;
-    border-radius: 25px;
-    border-width: 5px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fbff20a2;
+    color: #333;
 }
+
+/* back face card */
+
+.back{
+    text-transform: capitalize;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgba(172, 255, 47, 0.671);
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+/* front text card */
+
+h1 {
+    font-family: 'Nova Square', cursive;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* back text card */
 
 h2 {
-    text-align: center;
-    margin: 10px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
 }
 
-p {
-    text-align: justify;
-    margin: 10px;
-    font-size: 17px;
-}
+/* copyright */
 
 footer{
     display: flex;

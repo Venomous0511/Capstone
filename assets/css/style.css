@@ -143,18 +143,15 @@ nav .logo {
     width: 100%;
     max-width: 900px; 
     margin: 0 auto;
-    overflow: hidden;
-}
-
-.swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
     height: 820px;
-    width: 880px;
+    width: 900px;
 }
 
 /* FOOTER */
@@ -177,6 +174,6 @@ footer {
 
     .swiper-slide img {
         height: 700px;
-        width: 700px;
+        width: 650px;
     }
 }

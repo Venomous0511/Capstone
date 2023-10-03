@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- FAV ICON -->
     <link rel="icon" type="image/x-icon" href="assets/css/images/logo.png">
-
     <!-- LOCAL CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <!-- SWIPER CSS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
     <title>Annesa Resort and Event Place</title>
 </head>
 
@@ -50,7 +46,6 @@
                 Resort and Events Place
             </h3>
         </div>
-
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -76,9 +71,6 @@
         Copyright&copy; Annesa's Resort and Events Reservation System 2022. All rights reserved.
     </footer>
 
-    <!-- LOCAL JS -->
-    <script src="assets/js/main.js"></script>
-
     <!-- SWIPER JS CDN -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -86,18 +78,17 @@
     <script>
         let swiper = new Swiper('.swiper-container', {
             slidesPerView: 1, // Number of slides per view
-            spaceBetween: 50, // Space between slides (in pixels)
             loop: true, // Enable loop mode
             effect: "cube",
             grabCursor: true,
             cubeEffect: {
                 shadow: true,
                 slideShadows: true,
-                shadowOffset: 20,
-                shadowScale: 0.94,
+                shadowOffset: 18,
+                shadowScale: 0.84,
             },
             autoplay: {
-                delay: 3000, // Delay between slides in milliseconds (3 seconds in this example)
+                delay: 3000,
                 disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
             },
         });

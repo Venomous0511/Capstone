@@ -12,8 +12,8 @@
     <!-- LOCAL CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- SWIPER CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <title>Annesa Resort and Event Place</title>
 </head>
@@ -51,7 +51,25 @@
             </h3>
         </div>
 
-
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/css/images/slider/1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/css/images/slider/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/css/images/slider/3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/css/images/slider/4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/css/images/slider/5.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -61,8 +79,29 @@
     <!-- LOCAL JS -->
     <script src="assets/js/main.js"></script>
 
-    <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- SWIPER JS CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- SWIPER SCRIPT -->
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1, // Number of slides per view
+            spaceBetween: 50, // Space between slides (in pixels)
+            loop: true, // Enable loop mode
+            effect: "cube",
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            autoplay: {
+                delay: 3000, // Delay between slides in milliseconds (3 seconds in this example)
+                disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
+            },
+        });
+    </script>
 </body>
 
 </html>

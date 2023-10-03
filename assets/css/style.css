@@ -13,8 +13,8 @@ body {
     background-image: url('images/bgo.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 
 a {
@@ -138,6 +138,25 @@ nav .logo {
     color: #0026ff;
 }
 
+/* SWIPER */
+.swiper-container {
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    height: 820px;
+    width: 880px;
+}
+
 /* FOOTER */
 footer {
     background: linear-gradient(rgb(47, 47, 185), green);
@@ -145,4 +164,19 @@ footer {
     text-align: center;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:1440px) {
+    .header-subtitle {
+        font-size: 4rem;
+    }
+
+    .swiper-slide img {
+        height: 700px;
+        width: 700px;
+    }
 }

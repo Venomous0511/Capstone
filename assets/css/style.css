@@ -1,16 +1,20 @@
-/* Google Font */
+/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Lobster&display=swap');
 
-/* Modifier */
+/* MODIFIER */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 body {
     overflow: hidden;
+    background-image: url('images/bgo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 a {
@@ -21,7 +25,7 @@ ul {
     list-style: none;
 }
 
-/* Navigation Bar */
+/* NAVIGATION BAR */
 nav {
     background: linear-gradient(rgb(47, 47, 185), green);
     padding: 15px 0 5px 0;
@@ -54,26 +58,26 @@ nav .logo {
     background: rgb(0, 204, 255);
 }
 
-.menu li a {
+.menu li .main-menu {
     transform: skewX(25deg);
     font-size: 1rem;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     color: #ffffff;
     padding: 1em 2em;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .menu li a:hover {
     color: #000000;
 }
 
-/* Dropdown */
+/* DROPDOWN MENU */
 .menu-item {
     position: absolute;
     top: 3.6rem;
-    left: 2rem;
-    transform: skewX(25deg);
+    left: 1.5rem;
+    transform: skewX(15deg);
 }
 
 .menu-item li {
@@ -82,32 +86,14 @@ nav .logo {
 }
 
 .menu-item li .dropdown {
-    padding: 1em 3em;
+    padding: 1rem 2rem;
     text-transform: uppercase;
+    transform: skewX(30deg);
+    color: #ffffff;
+    font-family: 'Baloo Da 2', cursive;
 }
 
-.menu-item li:nth-child(odd) {
-    transform: skewX(25deg) translateX(0);
-}
-
-.menu-item li:nth-child(odd) a {
-    transform: skewX(25deg);
-}
-
-.menu-item li:nth-child(odd)::after {
-    right: -50%;
-    transform: skewX(25deg) rotate(3deg);
-}
-
-.menu-item li:nth-child(even) {
-    transform: skewX(25deg) translate(0);
-}
-
-.menu-item li:nth-child(even)>a {
-    transform: skewX(-25deg);
-}
-
-/* Show dropdown */
+/* SHOW DROPDOWN MENU */
 .menu-item,
 .menu-item li {
     opacity: 0;
@@ -115,19 +101,48 @@ nav .logo {
 }
 
 .menu-item li {
-    transition: 0.2s ease transform;
+    transition: .2s ease-in-out;
 }
 
-.menu>li:hover .menu-item,
-.menu>li:hover .menu-item li {
+.menu li:hover .menu-item,
+.menu li:hover .menu-item li {
     opacity: 1;
     visibility: visible;
 }
 
-.menu>li:hover .menu-item li:nth-child(even) {
-    transform: skewX(25deg) translateX(15px);
+/* SECTION */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 50%;
+    padding: 1rem;
 }
 
-.menu>li:hover .menu-item li:nth-child(odd) {
-    transform: skewX(-25deg) translateX(-15px);
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: -8px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.header-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #0026ff;
+}
+
+.header-subtitle {
+    font-family: 'Lobster', sans-serif;
+    font-size: 5rem;
+    color: #0026ff;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(rgb(47, 47, 185), green);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
 }

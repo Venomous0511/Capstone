@@ -10,7 +10,6 @@
 }
 
 body {
-    overflow: hidden;
     background-image: url('images/bgo.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,12 +25,29 @@ ul {
     list-style: none;
 }
 
+/* HAMBURGER MENU */
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+nav .closeMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
 /* NAVIGATION BAR */
 nav {
     background: linear-gradient(rgb(47, 47, 185), green);
-    padding: 15px 0 5px 0;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 nav .logo {
@@ -56,14 +72,9 @@ nav .logo img {
 .menu li {
     background: rgb(1, 145, 1);
     display: inline-flex;
+    margin: 2px;
     transform: skewX(-25deg);
-    margin: auto;
-    padding: 5px;
-    transition: .5s ease-in-out;
-}
-
-.menu li:last-child {
-    margin-right: 3rem;
+    padding: 8px;
 }
 
 .menu li:hover {
@@ -76,50 +87,11 @@ nav .logo img {
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     color: #ffffff;
-    padding: 1em 2em;
-    transition: .3s ease-in-out;
+    padding: 1rem 2rem;
 }
 
 .menu li a:hover {
     color: #000000;
-}
-
-/* DROPDOWN MENU */
-.menu-item {
-    position: absolute;
-    top: 3.6rem;
-    left: 1.5rem;
-    transform: skewX(15deg);
-}
-
-.menu-item li {
-    background-color: #1360acbe;
-    overflow: hidden;
-}
-
-.menu-item li .dropdown {
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    transform: skewX(30deg);
-    color: #ffffff;
-    font-family: 'Baloo Da 2', cursive;
-}
-
-/* SHOW DROPDOWN MENU */
-.menu-item,
-.menu-item li {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.menu-item li {
-    transition: .2s ease-in-out;
-}
-
-.menu li:hover .menu-item,
-.menu li:hover .menu-item li {
-    opacity: 1;
-    visibility: visible;
 }
 
 /* SECTION */
@@ -159,11 +131,13 @@ nav .logo img {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: .3s ease-in-out;
 }
 
 .swiper-slide img {
     height: 500px;
     width: 100%;
+    transition: .3s ease-in-out;
 }
 
 /* FOOTER */
@@ -179,3 +153,144 @@ footer {
 }
 
 /* RESPONSIVE */
+
+/* for laptop */
+@media screen and (max-width: 1440px) {
+    nav .logo {
+        font-size: 1.3rem;
+    }
+
+    nav .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu li .main-menu {
+        padding: .6em 1.5em;
+    }
+
+    .header-title {
+        font-size: 6rem;
+    }
+
+    .header-subtitle {
+        font-size: 5rem;
+    }
+
+    .swiper-container {
+        max-width: 700px;
+    }
+
+    .swiper-slide img {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav .logo {
+        font-size: 1rem;
+    }
+
+    .menu li .main-menu {
+        padding: .3em 1em;
+        font-size: .8rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-subtitle {
+        font-size: 3.5rem;
+    }
+
+    .swiper-slide img {
+        height: 500px;
+    }
+}
+
+/* for tablet */
+@media screen and (max-width: 800px) {
+    nav .menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top .5s ease;
+        background: #02008b;
+        opacity: .8;
+        display: none;
+    }
+
+    nav .menu li {
+        background: none;
+        transform: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    .menu li:first-child {
+        border-top: 2px solid #ffffff;
+    }
+
+    nav .menu li:hover {
+        background: none;
+    }
+
+    nav .menu li .main-menu {
+        font-size: 2rem;
+        color: #ffffff;
+        transform: none;
+    }
+
+    nav .menu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    .swiper-container {
+        max-width: 500px;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+    }
+}
+
+/* for Mobile */
+@media screen and (max-width: 425px) {
+    nav .logo {
+        margin: 0 .1rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
+    .swiper-container {
+        max-width: 300px;
+    }
+
+    .swiper-slide img {
+        height: 300px;
+    }
+
+    footer {
+        font-size: .8rem;
+    }
+}

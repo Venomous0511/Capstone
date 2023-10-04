@@ -118,7 +118,7 @@ nav .logo {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: .3rem;
 }
 
 .header {
@@ -135,8 +135,8 @@ nav .logo {
 
 .header-subtitle {
     font-family: 'Lobster', sans-serif;
-    font-size: 5rem;
-    color: #0026ff;
+    font-size: 6rem;
+    color: #00ff00;
 }
 
 /* SWIPER */

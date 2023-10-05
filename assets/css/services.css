@@ -95,26 +95,7 @@ nav .logo img {
 }
 
 /* SECTION */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-}
 
-.container .box {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.container .box .content {
-    margin-bottom: 20px;
-}
 
 /* FOOTER */
 footer {
@@ -123,6 +104,8 @@ footer {
     text-align: center;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 

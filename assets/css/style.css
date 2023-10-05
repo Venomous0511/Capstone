@@ -157,46 +157,8 @@ footer {
 }
 
 /* RESPONSIVE */
-/* Mobile*/
-@media screen and (max-width: 320px) {
-    nav .logo .logo-container h1 {
-        font-size: 1rem;
-    }
-
-    nav .logo .logo-container img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    nav .logo {
-        margin: 0 .1rem;
-    }
-
-    .header-title {
-        font-size: 4rem;
-    }
-
-    .header-subtitle {
-        font-size: 2rem;
-    }
-
-    .swiper-container {
-        max-width: 300px;
-    }
-
-    .swiper-slide img {
-        height: 300px;
-    }
-
-    footer {
-        font-size: .8rem;
-    }
-}
-
-/* TABLET */
-@media screen and (max-width: 800px) {
+/* MOBILE */
+@media screen and (max-width: 875px) {
     nav .menu {
         height: 100vh;
         position: fixed;
@@ -245,66 +207,60 @@ footer {
         display: block;
     }
 
+    nav .logo {
+        margin: .1rem;
+    }
+
+    nav .logo .logo-container h1 {
+        font-size: 1rem;
+    }
+
+    nav .logo .logo-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header {
+        margin: 0;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
     .swiper-container {
-        max-width: 500px;
+        max-width: 300px;
     }
 
     .swiper-slide img {
-        height: 400px;
+        height: 300px;
     }
 }
 
 /* LAPTOP */
 @media screen and (max-width: 1440px) {
     nav .logo {
-        font-size: 1.3rem;
+        margin: 0;
     }
 
-    nav .logo img {
-        width: 40px;
-        height: 40px;
+    nav .logo .logo-container h1 {
+        font-size: 1.5rem;
     }
 
     .menu li .main-menu {
-        padding: .6em 1.5em;
-    }
-
-    .header-title {
-        font-size: 6rem;
-    }
-
-    .header-subtitle {
-        font-size: 5rem;
+        font-size: .8rem;
+        padding: .2rem .8rem;
     }
 
     .swiper-container {
-        max-width: 700px;
+        max-width: 500px;
     }
 
     .swiper-slide img {
-        height: 430px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    nav .logo {
-        font-size: 1rem;
-    }
-
-    .menu li .main-menu {
-        padding: .3em 1em;
-        font-size: .8rem;
-    }
-
-    .header-title {
-        font-size: 4rem;
-    }
-
-    .header-subtitle {
-        font-size: 3.5rem;
-    }
-
-    .swiper-slide img {
-        height: 500px;
+        height: 400px;
     }
 }

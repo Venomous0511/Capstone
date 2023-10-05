@@ -2,17 +2,14 @@ const mainMenu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
-
-function show() {
+openMenu.addEventListener('click', () => {
     mainMenu.style.display = 'flex';
     mainMenu.style.top = '0';
-}
+});
 
-function close() {
+closeMenu.addEventListener('click', () => {
     mainMenu.style.top = '-100%';
-}
+});
 
 let swiper = new Swiper('.swiper-container', {
     slidesPerView: 1, // Number of slides per view

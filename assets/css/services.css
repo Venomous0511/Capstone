@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('images/bgo.png');
+    background-image: url('images/servicesBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -94,84 +94,16 @@ nav .logo img {
     color: #000000;
 }
 
-.box-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
-}
 
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(160deg, aqua, limegreen);
-    border: blue;
-    box-sizing: border-box;
-    border-style: outset;
-    border-radius: 50px;
-}
 
-a {
-    text-decoration: none;
-}
-
-.box .img-1 {
-    width: 200px;
-    height: 200px;
-}
-
-.box .img-2 {
-    display: none;
-}
-
-.box:hover .img-1 {
-    display: none;
-}
-
-.box:hover .img-2 {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-}
-
-.box h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 4px;
-    text-decoration-line: none;
-    color: rgb(0, 61, 0);
-}
-
-.box:hover h1 {
-    display: none;
-}
-
+/* FOOTER */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Luxurious', cursive;
-    font-weight: 900;
-    height: 50px;
-    background: linear-gradient(90deg, blue, limegreen, green);
-}
-
-@media screen and (max-width: 2560px) {
-    .box-container {
-        max-height: 100vh;
-    }
-
-}
-
-@media screen and (max-width: 1440px) {
-    .box-container {
-        max-height: 100vh;
-    }
+    background: linear-gradient(rgb(47, 47, 185), green);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

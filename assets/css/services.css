@@ -13,7 +13,8 @@ body {
     background-image: url('/assets/images/servicesBG.png');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -23,6 +24,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+.container {
+    flex: 1;
 }
 
 /* HAMBURGER MENU */
@@ -95,7 +100,42 @@ nav .logo img {
 }
 
 /* SECTION */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: .3rem;
+}
 
+.container .box {
+    display: inline-flex;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container .box .content {
+    background: #00ff22a4;
+    color: #02008b;
+    padding: 5rem 7rem;
+    margin: 5rem;
+    border-radius: 2rem;
+}
+
+.container .box .content .header {
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+}
+
+.container .box .content i {
+    color: #02008b;
+    font-size: 10rem;
+}
+
+.container .box .content i:hover {
+    cursor: pointer;
+    color: #ffffff;
+}
 
 /* FOOTER */
 footer {
@@ -104,53 +144,26 @@ footer {
     text-align: center;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    flex-shrink: 0;
 }
 
 /* RESPONSIVE */
-
-/* for laptop */
-@media screen and (max-width: 1440px) {
-    nav .logo {
-        font-size: 1.3rem;
-    }
-
-    nav .logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .menu li .main-menu {
-        padding: .6em 1.5em;
-    }
-
-    .header-title {
-        font-size: 6rem;
-    }
-
-    .header-subtitle {
-        font-size: 5rem;
-    }
-
-    .swiper-container {
-        max-width: 700px;
-    }
-
-    .swiper-slide img {
-        height: 430px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    nav .logo {
+/* Mobile*/
+@media screen and (max-width: 320px) {
+    nav .logo .logo-container h1 {
         font-size: 1rem;
     }
 
-    .menu li .main-menu {
-        padding: .3em 1em;
-        font-size: .8rem;
+    nav .logo .logo-container img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav .logo {
+        margin: 0 .1rem;
     }
 
     .header-title {
@@ -158,15 +171,23 @@ footer {
     }
 
     .header-subtitle {
-        font-size: 3.5rem;
+        font-size: 2rem;
+    }
+
+    .swiper-container {
+        max-width: 300px;
     }
 
     .swiper-slide img {
-        height: 500px;
+        height: 300px;
+    }
+
+    footer {
+        font-size: .8rem;
     }
 }
 
-/* for tablet */
+/* TABLET */
 @media screen and (max-width: 800px) {
     nav .menu {
         height: 100vh;
@@ -225,10 +246,46 @@ footer {
     }
 }
 
-/* for Mobile */
-@media screen and (max-width: 425px) {
+/* LAPTOP */
+@media screen and (max-width: 1440px) {
     nav .logo {
-        margin: 0 .1rem;
+        font-size: 1.3rem;
+    }
+
+    nav .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu li .main-menu {
+        padding: .6em 1.5em;
+    }
+
+    .header-title {
+        font-size: 6rem;
+    }
+
+    .header-subtitle {
+        font-size: 5rem;
+    }
+
+    .swiper-container {
+        max-width: 700px;
+    }
+
+    .swiper-slide img {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav .logo {
+        font-size: 1rem;
+    }
+
+    .menu li .main-menu {
+        padding: .3em 1em;
+        font-size: .8rem;
     }
 
     .header-title {
@@ -236,18 +293,10 @@ footer {
     }
 
     .header-subtitle {
-        font-size: 2rem;
-    }
-
-    .swiper-container {
-        max-width: 300px;
+        font-size: 3.5rem;
     }
 
     .swiper-slide img {
-        height: 300px;
-    }
-
-    footer {
-        font-size: .8rem;
+        height: 500px;
     }
 }

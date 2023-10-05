@@ -107,3 +107,146 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* RESPONSIVE */
+
+/* for laptop */
+@media screen and (max-width: 1440px) {
+    nav .logo {
+        font-size: 1.3rem;
+    }
+
+    nav .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu li .main-menu {
+        padding: .6em 1.5em;
+    }
+
+    .header-title {
+        font-size: 6rem;
+    }
+
+    .header-subtitle {
+        font-size: 5rem;
+    }
+
+    .swiper-container {
+        max-width: 700px;
+    }
+
+    .swiper-slide img {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav .logo {
+        font-size: 1rem;
+    }
+
+    .menu li .main-menu {
+        padding: .3em 1em;
+        font-size: .8rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-subtitle {
+        font-size: 3.5rem;
+    }
+
+    .swiper-slide img {
+        height: 500px;
+    }
+}
+
+/* for tablet */
+@media screen and (max-width: 800px) {
+    nav .menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top .5s ease;
+        background: #02008b;
+        opacity: .8;
+        display: none;
+    }
+
+    nav .menu li {
+        background: none;
+        transform: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    .menu li:first-child {
+        border-top: 2px solid #ffffff;
+    }
+
+    nav .menu li:hover {
+        background: none;
+    }
+
+    nav .menu li .main-menu {
+        font-size: 2rem;
+        color: #ffffff;
+        transform: none;
+    }
+
+    nav .menu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    .swiper-container {
+        max-width: 500px;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+    }
+}
+
+/* for Mobile */
+@media screen and (max-width: 425px) {
+    nav .logo {
+        margin: 0 .1rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
+    .swiper-container {
+        max-width: 300px;
+    }
+
+    .swiper-slide img {
+        height: 300px;
+    }
+
+    footer {
+        font-size: .8rem;
+    }
+}

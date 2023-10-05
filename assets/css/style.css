@@ -13,7 +13,8 @@ body {
     background-image: url('/assets/images/mainBG.png');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -23,6 +24,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+.container {
+    flex: 1;
 }
 
 /* HAMBURGER MENU */
@@ -95,7 +100,7 @@ nav .logo img {
 }
 
 /* SECTION */
-.container {
+.section-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,9 +152,8 @@ footer {
     text-align: center;
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    flex-shrink: 0;
 }
 
 /* RESPONSIVE */

@@ -147,8 +147,8 @@ nav .logo img {
 .container .box .content i:hover {
     padding: 2rem;
     border-radius: 50%;
-    animation: rotate 1.5s linear;
 }
+
 
 .container .box .content .custom:hover {
     color: #0400ff;
@@ -174,46 +174,8 @@ footer {
 }
 
 /* RESPONSIVE */
-/* Mobile*/
-@media screen and (max-width: 320px) {
-    nav .logo .logo-container h1 {
-        font-size: 1rem;
-    }
-
-    nav .logo .logo-container img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    nav .logo {
-        margin: 0 .1rem;
-    }
-
-    .header-title {
-        font-size: 4rem;
-    }
-
-    .header-subtitle {
-        font-size: 2rem;
-    }
-
-    .swiper-container {
-        max-width: 300px;
-    }
-
-    .swiper-slide img {
-        height: 300px;
-    }
-
-    footer {
-        font-size: .8rem;
-    }
-}
-
-/* TABLET */
-@media screen and (max-width: 800px) {
+/* MOBILE */
+@media screen and (max-width: 890px) {
     nav .menu {
         height: 100vh;
         position: fixed;
@@ -262,48 +224,26 @@ footer {
         display: block;
     }
 
-    .swiper-container {
-        max-width: 500px;
+    nav .logo {
+        margin: 0 1rem;
     }
 
-    .swiper-slide img {
-        height: 400px;
+    .container .box {
+        display: block;
+    }
+
+    .container .box .content {
+        padding: .5rem 1rem;
+        margin: 2rem;
     }
 }
 
 /* LAPTOP */
 @media screen and (max-width: 1440px) {
     nav .logo {
-        font-size: 1.3rem;
+        margin: .5rem;
     }
 
-    nav .logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .menu li .main-menu {
-        padding: .6em 1.5em;
-    }
-
-    .header-title {
-        font-size: 6rem;
-    }
-
-    .header-subtitle {
-        font-size: 5rem;
-    }
-
-    .swiper-container {
-        max-width: 700px;
-    }
-
-    .swiper-slide img {
-        height: 430px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
     nav .logo {
         font-size: 1rem;
     }
@@ -313,15 +253,18 @@ footer {
         font-size: .8rem;
     }
 
-    .header-title {
-        font-size: 4rem;
+    .container .box .content {
+        padding: .6rem 1.5rem;
+        margin: 2rem;
     }
 
-    .header-subtitle {
-        font-size: 3.5rem;
+    .container .box .content .header {
+        padding: 2rem;
+        font-size: .8rem;
+        margin-bottom: 2rem;
     }
 
-    .swiper-slide img {
-        height: 500px;
+    .container .box .content i {
+        font-size: 7rem;
     }
 }

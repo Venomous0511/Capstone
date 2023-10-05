@@ -115,26 +115,51 @@ nav .logo img {
 }
 
 .container .box .content {
-    background: #00ff22a4;
-    color: #02008b;
-    padding: 5rem 7rem;
-    margin: 5rem;
+    background: #008a12b9;
+    color: #ffffff;
+    padding: 5rem 8rem;
+    margin: 4rem;
     border-radius: 2rem;
+    animation: rotate 1.5s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .container .box .content .header {
     margin-bottom: 5rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .container .box .content i {
-    color: #02008b;
+    color: #ffffff;
     font-size: 10rem;
+    transition: .08s ease-in-out;
 }
 
 .container .box .content i:hover {
-    cursor: pointer;
-    color: #ffffff;
+    padding: 2rem;
+    border-radius: 50%;
+    animation: rotate 1.5s linear;
+}
+
+.container .box .content .custom:hover {
+    color: #0400ff;
+}
+
+.container .box .content .sun:hover {
+    color: #ffbc02;
+}
+
+.container .box .content .moon:hover {
+    color: #f700ff;
 }
 
 /* FOOTER */

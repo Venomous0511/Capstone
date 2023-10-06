@@ -177,7 +177,7 @@ nav .logo img {
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 100px;
+    right: 50px;
     font-size: 3rem;
     font-weight: 800;
     color: #fff;
@@ -299,5 +299,10 @@ footer {
     .menu li .main-menu {
         font-size: .8rem;
         padding: .2rem .8rem;
+    }
+
+    .modal-content {
+        width: 80%;
+        height: 60%;
     }
 }

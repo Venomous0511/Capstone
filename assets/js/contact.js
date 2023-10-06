@@ -1,18 +1,29 @@
-document.getElementById('video1').addEventListener('ended', function () {
+// Get references to video elements
+const video1 = document.getElementById('video1');
+const video2 = document.getElementById('video2');
+
+// Event listener for the first video's ended event
+video1.addEventListener('ended', function () {
     // Hide the first video
-    document.getElementById('video1').style.display = 'none';
+    video1.style.display = 'none';
 
     // Show the second video
-    document.getElementById('video2').style.display = 'block';
+    video2.style.display = 'block';
 
     // Play the second video
-    document.getElementById('video2').play();
+    video2.play();
 });
 
 // Event listener for the second video's ended event
-document.getElementById('video2').addEventListener('ended', function () {
+video2.addEventListener('ended', function () {
+    // Hide the second video
+    video2.style.display = 'none';
+
+    // Show the first video
+    video1.style.display = 'block';
+
     // Play the first video
-    document.getElementById('video1').play();
+    video1.play();
 });
 
 const modal = document.getElementById('modal');

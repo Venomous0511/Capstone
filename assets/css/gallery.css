@@ -108,7 +108,7 @@ nav .logo img {
 }
 
 .header-video {
-    width: 800px;
+    width: 700px;
     border-radius: 2rem;
     margin-bottom: 1rem;
 }
@@ -130,6 +130,20 @@ nav .logo img {
     padding: 10px;
     text-align: center;
     margin: 1rem 0;
+}
+
+.img-box:hover {
+    animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .img-box img {
@@ -183,4 +197,107 @@ footer {
     font-family: 'Josefin Sans', sans-serif;
     width: 100%;
     flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    nav .menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top .5s ease;
+        background: #02008b;
+        opacity: .8;
+        display: none;
+    }
+
+    nav .menu li {
+        background: none;
+        transform: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    .menu li:first-child {
+        border-top: 2px solid #ffffff;
+    }
+
+    nav .menu li:hover {
+        background: none;
+    }
+
+    nav .menu li .main-menu {
+        font-size: 2rem;
+        color: #ffffff;
+        transform: none;
+    }
+
+    nav .menu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .logo {
+        margin: .1rem;
+    }
+
+    nav .logo .logo-container h1 {
+        font-size: 1rem;
+    }
+
+    nav .logo .logo-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-video {
+        width: 300px;
+    }
+
+    .img-box img {
+        height: 300px;
+    }
+
+    .modal-content {
+        position: relative;
+        top: 200px;
+    }
+
+    .close-btn {
+        right: 20px;
+    }
+}
+
+/* LAPTOP */
+@media screen and (max-width: 1440px) {
+    nav .logo {
+        margin: 0;
+    }
+
+    nav .logo .logo-container h1 {
+        font-size: .8rem;
+    }
+
+    nav .logo .logo-container img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu li .main-menu {
+        font-size: .8rem;
+        padding: .2rem .8rem;
+    }
 }

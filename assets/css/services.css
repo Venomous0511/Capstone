@@ -162,6 +162,7 @@ nav .logo img {
     color: #f700ff;
 }
 
+/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -199,15 +200,8 @@ nav .logo img {
     cursor: pointer;
 }
 
-.form-group {
-    margin: 1rem;
-}
+/* FORM STYLE */
 
-
-input {
-    width: 80%;
-    height: 2.5rem;
-}
 
 /* FOOTER */
 footer {

@@ -183,14 +183,14 @@ nav .logo img {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 25%;
+    width: 40%;
     border-radius: 2rem;
 }
 
 .close {
     color: #aaa;
     position: absolute;
-    left: 61%;
+    left: 68%;
     font-size: 25px;
     font-weight: bold;
 }
@@ -373,6 +373,28 @@ footer {
     .container .box .content {
         padding: .5rem 1rem;
         margin: 2rem;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .close {
+        left: 80%;
+    }
+
+    input[type="number"] {
+        width: 30%;
+    }
+
+    .daytime,
+    .nighttime {
+        font-size: 1rem;
+    }
+
+    label[for="adults-day"],
+    label[for="adults-night"] {
+        margin-left: 70px;
     }
 }
 

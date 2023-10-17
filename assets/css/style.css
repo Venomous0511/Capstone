@@ -25,7 +25,7 @@
 }
 
 body {
-    background-image: url('/assets/images/mainBG.png');
+    background-image: url('../images/mainBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

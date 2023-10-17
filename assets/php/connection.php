@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adultsday = $_POST["adultsday"];
 
     // Prepare and execute SQL query
-    $sql = "INSERT INTO `day_reservations`(`id`, `nameday`, `emailday`, `addressday`, `dateday`, `cottage_id`, `kidsday`, `adultsday`) VALUES ('$nameday','$emailday','$addressday','$dateday','$dateday ','$cottage_id','$kidsday','$adultsday')";
+    $sql = "INSERT INTO day_reservations (nameday, emailday, addressday, dateday, cottage_id, kidsday, adultsday)
+            VALUES ('$nameday', '$emailday', '$addressday', '$dateday', $cottage_id, $kidsday, $adultsday)";
 
     if ($conn->query($sql) === TRUE) {
         echo "Reservation successful!";

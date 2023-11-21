@@ -197,15 +197,15 @@ nav .logo img {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 40%;
-    border-radius: 2rem;
+    width: 30%;
+    border-radius: 5rem 0;
 }
 
 .close {
     color: #aaa;
     position: absolute;
-    left: 68%;
-    font-size: 25px;
+    left: 62.8%;
+    font-size: 40px;
     font-weight: bold;
 }
 

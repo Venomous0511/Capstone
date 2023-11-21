@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="./css/contact.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+
   <title>Annesa's Resort and Event Place</title>
 </head>
 
@@ -47,20 +50,18 @@
         <h2>Contact us</h2>
         <form id="bookingForm">
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">Full Name:</label>
+            <input type="text" id="full_name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+            <input type="text" id="email_id" name="email" required>
           </div>
           <div class="form-group">
             <label for="message">Message:</label>
-            <textarea class="area" rows="20" cols="60"></textarea>
+            <textarea class="area" rows="20" cols="60" id="message"></textarea>
           </div>
-          <div class="form-group">
-            <input type="submit" value="Submit">
-          </div>
+          <button class="button" onclick="SendMail()">Submit</button>
         </form>
       </div>
 

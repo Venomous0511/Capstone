@@ -12,7 +12,6 @@
 *::-webkit-scrollbar {
     background-color: hsl(207, 4%, 15%);
     width: 10px;
-    border-radius: 2rem;
 }
 
 *::-webkit-scrollbar-thumb {

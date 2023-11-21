@@ -120,25 +120,20 @@ nav .logo img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: .3rem;
-}
-
-.header {
-    margin: 2rem 0;
-    text-shadow: -8px 4px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
     font-size: 7rem;
     text-transform: uppercase;
-    color: #0026ff;
+    color: #0e5f0e;
 }
 
 .header-subtitle {
-    font-family: 'Lobster', sans-serif;
-    font-size: 6rem;
-    color: #00c400;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: #0e5f0e;
 }
 
 /* SWIPER */
@@ -154,9 +149,10 @@ nav .logo img {
 }
 
 .swiper-slide img {
-    height: 450px;
+    height: 500px;
     width: 100%;
     transition: .3s ease-in-out;
+    overflow: hidden;
 }
 
 /* FOOTER */
@@ -244,10 +240,6 @@ footer {
 
     .header-subtitle {
         font-size: 2rem;
-    }
-
-    .swiper-container {
-        max-width: 300px;
     }
 
     .swiper-slide img {

@@ -166,6 +166,24 @@ nav .logo img {
     background-color: #45a049;
 }
 
+.contactMessage {
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 800;
+    font-size: 30px;
+    position: absolute;
+    bottom: 4.5rem;
+    left: 25rem;
+}
+
+/* Status color */
+.color-red {
+    color: hsl(4, 71%, 50%);
+}
+
+.color-blue {
+    color: hsl(123, 100%, 22%);
+}
+
 .google-map iframe {
     margin: 0 50px;
     border: 1px solid #ffffff;

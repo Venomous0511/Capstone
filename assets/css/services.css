@@ -164,10 +164,6 @@ nav .logo img {
     cursor: pointer;
 }
 
-.container .box .content .custom:hover {
-    color: #0400ff;
-}
-
 .container .box .content .sun:hover {
     color: #ffbc02;
 }
@@ -439,6 +435,6 @@ footer {
     }
 
     .container .box .content i {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 }

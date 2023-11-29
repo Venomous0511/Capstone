@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>Admin</title>
+</head>
+
+<div>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon"><img src="assets/images/logo.png" alt=""></span>
+                    <span class="title">Annesa's Resort</span>
+                </a>
+            </li>
+            <li onclick="showDashboard()">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li onclick="showCustomers()">
+                <a href="#">
+                    <span class="icon"><ion-icon name="people-circle-outline"></ion-icon></span>
+                    <span class="title">Customers</span>
+                </a>
+            </li>
+            <li onclick="showMessages()">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+                    <span class="title">Messages</span>
+                </a>
+            </li>
+            <li onclick="showRecords()">
+                <a href="#">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="title">Records</span>
+                </a>
+            </li>
+            <li onclick="showPassword()">
+                <a href="#">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <span class="title">Password</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="dashboard" id="dashboard">
+            <!-- status update -->
+            <div class="cardbox">
+                <a href="assets/components/records.html">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">80</div>
+                            <div class="cardname">Bookings</div>
+                        </div>
+                        <div class="iconbx">
+                            <ion-icon name="bag-handle-outline"></ion-icon>
+                        </div>
+                    </div>
+                </a>
+                <a href="assets/components/messages.html">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">32</div>
+                            <div class="cardname">Messages</div>
+                        </div>
+                        <div class="iconbx">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </div>
+                    </div>
+                </a>
+                <a href="assets/components/customers.html">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">₱15,000</div>
+                            <div class="cardname">Income</div>
+                        </div>
+                        <div class="iconbx">
+                            <ion-icon name="wallet-outline"></ion-icon>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Order details -->
+            <div class="details">
+                <div class="recentbookings">
+                    <div class="cardheader">
+                        <h2>Recent Bookings</h2>
+                        <a href="assets/components/records.html" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <td>Name</td>
+                            <td>Payment</td>
+                            <td>Status</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>2,000</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>6,000</td>
+                                <td><span class="status done">Done</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>3,000</td>
+                                <td><span class="status progress">In progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>2,500</td>
+                                <td><span class="status refund">refund</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>20,000</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cabrera, Joel</td>
+                                <td>5,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cabrera, Joel</td>
+                                <td>20,000</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- New Customers -->
+                <div class="recentCustomers">
+                    <div class="cardheader">
+                        <h2>Recent Customers</h2>
+                        <a href="assets/components/customers.html" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Joel Cabrera<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Richel Malang<br><span>Quezon City</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUSTOMERS -->
+        <div class="customers" id="customers">
+            <div class="Customers">
+                <div class="cardheader">
+                    <h2>Recent Customers</h2>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>Richel Malang</td>
+                        <td><span>Quezon City</span></td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>Richel Malang</td>
+                        <td><span>Quezon City</span></td>
+                        <td>2000</td>
+                    </tr>
+
+                </table>
+
+                <div class="total-container">
+                    <h4>Total: <span class="total">₱15000</span></h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- MESSAGES -->
+        <!-- <div class="messages">
+            New Customers
+            <div class="recentCustomers">
+                <div class="cardheader">
+                    <h2>Recent Customers</h2>
+                </div>
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>MESSAGE</th>
+                        <th>EMAIL</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Richel Malang</h4>
+                        </td>
+                        <td><span>Can I have a reservation?</span></td>
+                        <td>gurang@gmail.com</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div> -->
+
+        <!-- RECORDS -->
+        <!-- <div class="records">
+            order details list
+            <div class="details">
+                <div class="recentbookings">
+                    <div class="cardheader">
+                        <h2>Recent Bookings</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <td>Name</td>
+                            <td>Payment</td>
+                            <td>No. of Customers</td>
+                            <td>Status</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>2,000</td>
+                                <td>3</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>6,000</td>
+                                <td>5</td>
+                                <td><span class="status done">Done</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>3,000</td>
+                                <td>4</td>
+                                <td><span class="status progress">In progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>2,500</td>
+                                <td>2</td>
+                                <td><span class="status refund">refund</span></td>
+                            </tr>
+                            <tr>
+                                <td>Malang, Richel</td>
+                                <td>20,000</td>
+                                <td>15</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cabrera, Joel</td>
+                                <td>5,000</td>
+                                <td>4</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cabrera, Joel</td>
+                                <td>20,000</td>
+                                <td>16</td>
+                                <td><span class="status unpaid">Unpaid</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- CHANGE PASSWORD -->
+        <!-- <div class="change-password">
+            <div class="password">
+                <form action="post">
+                    <h3>New Password</h3>
+                    <input type="text" placeholder="Insert Password">
+                    <h3>Confirm Password</h3>
+                    <input type="text" placeholder="Re-enter Password">
+                </form>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script src="./assets/js/admin.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    </body>
+
+</html>

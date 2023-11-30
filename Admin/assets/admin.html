@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" href="./css/admin.css">
+    <!-- FAV ICON -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
     <title>Admin</title>
 </head>
 
@@ -13,7 +16,7 @@
         <ul>
             <li>
                 <a href="#">
-                    <span class="icon"><img src="assets/images/logo.png" alt=""></span>
+                    <span class="icon"><img src="./images/logo.png" alt=""></span>
                     <span class="title">Annesa's Resort</span>
                 </a>
             </li>
@@ -48,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./logout.php">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                     <span class="title">Sign Out</span>
                 </a>
@@ -108,7 +111,6 @@
                 <div class="recentbookings">
                     <div class="cardheader">
                         <h2>Recent Bookings</h2>
-                        <a href="assets/components/records.html" class="btn">View All</a>
                     </div>
                     <table>
                         <thead>
@@ -155,7 +157,6 @@
                 <div class="recentCustomers">
                     <div class="cardheader">
                         <h2>Recent Customers</h2>
-                        <a href="assets/components/customers.html" class="btn">View All</a>
                     </div>
                     <table>
                         <tr>
@@ -326,7 +327,7 @@
 
     </div>
 
-    <script src="./assets/js/admin.js"></script>
+    <script src="./js/admin.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     </body>

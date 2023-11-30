@@ -344,15 +344,6 @@ a {
     text-align: center;
 }
 
-.status.done {
-    padding: 2px 4px;
-    background: #8de02c;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .status.progress {
     padding: 2px 4px;
     background: #b7d608;
@@ -364,7 +355,7 @@ a {
 
 .status.paid {
     padding: 2px 4px;
-    background: #0a9b94;
+    background: #8de02c;
     color: var(--white);
     border-radius: 4px;
     font-size: 14px;
@@ -425,36 +416,44 @@ a {
     color: var(--white);
 }
 
-/* Customers */
-.customers {
+/* Customers and Messages*/
+.customers,
+.messages,
+.records,
+.change-password {
     display: none;
     margin: auto 50px;
 }
 
-.Customers {
+.Customers,
+.Messages {
     position: relative;
     display: grid;
     grid-gap: 10px;
     padding: 30px;
+    margin: 50px 0;
     background: var(--white);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
 
-.Customers table {
+.Customers table,
+.Messages table {
     width: 100%;
     margin: 40px 0;
     border: 1px solid #000;
     border-radius: 20px;
 }
 
-.Customers table tr th {
+.Customers table tr th,
+.Messages table tr th {
     padding: 40px 0;
     letter-spacing: 3px;
     font-size: 1.5rem;
 }
 
-.Customers table tr td {
+.Customers table tr td,
+.Messages table tr td {
     text-align: center;
     padding: 20px 0;
     font-size: 1.1rem;
@@ -470,25 +469,75 @@ a {
 }
 
 /* RECORDS */
+.Records {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    grid-gap: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Records .bookings {
+    position: relative;
+    display: grid;
+    line-height: 50px;
+    background: var(--white);
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.Records .bookings thead {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
 
 /* CHANGE PASSWORD */
 .password {
     position: relative;
-    display: grid;
-    min-height: 500px;
-    padding: 20px;
+    width: 50%;
+    padding: 40px;
     background: var(--white);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-    border: 1px solid;
-    margin: 10px;
+    border: 1px solid #000;
+    margin: 200px auto;
     text-align: center;
+}
+
+.pass-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.password input {
-    width: 50%;
-    place-content: center;
+.pass-form label,
+input {
+    margin: 10px 0;
+}
+
+.pass-form label {
+    font-size: 1.3rem;
+}
+
+.pass-form input {
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: #ccc;
+    border: none;
+}
+
+.pass-form .button {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
 }
 
 /* Responsive admin */

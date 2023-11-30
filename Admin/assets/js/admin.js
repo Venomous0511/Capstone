@@ -17,12 +17,35 @@ function activeLink() {
 }
 list.forEach((item) => item.addEventListener('click', activeLink));
 
+function showElement(elementId) {
+    const elements = ['dashboard', 'customers', 'messages', 'records', 'change-password'];
+
+    elements.forEach(id => {
+        const element = document.getElementById(id);
+        if (id === elementId) {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    });
+}
+
 function showDashboard() {
-    document.getElementById('dashboard').style.display = 'block';
-    document.getElementById('customers').style.display = 'none';
+    showElement('dashboard');
 }
 
 function showCustomers() {
-    document.getElementById('dashboard').style.display = 'none';
-    document.getElementById('customers').style.display = 'block';
+    showElement('customers');
+}
+
+function showMessages() {
+    showElement('messages');
+}
+
+function showRecords() {
+    showElement('records');
+}
+
+function showPassword() {
+    showElement('change-password');
 }

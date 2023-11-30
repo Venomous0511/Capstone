@@ -68,7 +68,7 @@
         <div class="dashboard" id="dashboard">
             <!-- status update -->
             <div class="cardbox">
-                <a href="assets/components/records.html">
+                <a href="">
                     <div class="card">
                         <div>
                             <div class="numbers">80</div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="assets/components/messages.html">
+                <a href="">
                     <div class="card">
                         <div>
                             <div class="numbers">32</div>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="assets/components/customers.html">
+                <a href="">
                     <div class="card">
                         <div>
                             <div class="numbers">₱15,000</div>
@@ -121,11 +121,6 @@
                                 <td>Malang, Richel</td>
                                 <td>2,000</td>
                                 <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>6,000</td>
-                                <td><span class="status done">Done</span></td>
                             </tr>
                             <tr>
                                 <td>Malang, Richel</td>
@@ -219,28 +214,28 @@
                     <tr>
                         <td>Richel Malang</td>
                         <td><span>Quezon City</span></td>
-                        <td>2000</td>
+                        <td id="subtotal">2000</td>
                     </tr>
                     <tr>
                         <td>Richel Malang</td>
                         <td><span>Quezon City</span></td>
-                        <td>2000</td>
+                        <td id="subtotal">2000</td>
                     </tr>
 
                 </table>
 
                 <div class="total-container">
-                    <h4>Total: <span class="total">₱15000</span></h4>
+                    <h4>Total: <span class="total">₱</span></h4>
                 </div>
             </div>
         </div>
 
         <!-- MESSAGES -->
-        <!-- <div class="messages">
-            New Customers
-            <div class="recentCustomers">
+        <div class="messages" id="messages">
+            <!-- New Customers -->
+            <div class="Messages">
                 <div class="cardheader">
-                    <h2>Recent Customers</h2>
+                    <h2>Messages</h2>
                 </div>
                 <table>
                     <tr>
@@ -249,88 +244,33 @@
                         <th>EMAIL</th>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
+                        <td> Richel Malang</td>
                         <td><span>Can I have a reservation?</span></td>
                         <td>gurang@gmail.com</td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
+                        <td> Richel Malang</td>
                         <td><span>Can I have a reservation?</span></td>
                         <td>gurang@gmail.com</td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
+                        <td> Richel Malang</td>
                         <td><span>Can I have a reservation?</span></td>
                         <td>gurang@gmail.com</td>
                     </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Richel Malang</h4>
-                        </td>
-                        <td><span>Can I have a reservation?</span></td>
-                        <td>gurang@gmail.com</td>
-                    </tr>
-
                 </table>
             </div>
-        </div> -->
+        </div>
 
         <!-- RECORDS -->
-        <!-- <div class="records">
-            order details list
-            <div class="details">
-                <div class="recentbookings">
+        <div class="records" id="records">
+            <!-- Records -->
+            <div class="Records">
+                <div class="bookings">
                     <div class="cardheader">
-                        <h2>Recent Bookings</h2>
+                        <h2>Records</h2>
                     </div>
+
                     <table>
                         <thead>
                             <td>Name</td>
@@ -338,18 +278,13 @@
                             <td>No. of Customers</td>
                             <td>Status</td>
                         </thead>
+
                         <tbody>
                             <tr>
                                 <td>Malang, Richel</td>
                                 <td>2,000</td>
                                 <td>3</td>
                                 <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>6,000</td>
-                                <td>5</td>
-                                <td><span class="status done">Done</span></td>
                             </tr>
                             <tr>
                                 <td>Malang, Richel</td>
@@ -364,40 +299,30 @@
                                 <td><span class="status refund">refund</span></td>
                             </tr>
                             <tr>
-                                <td>Malang, Richel</td>
-                                <td>20,000</td>
-                                <td>15</td>
-                                <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
-                            <tr>
                                 <td>Cabrera, Joel</td>
                                 <td>5,000</td>
                                 <td>4</td>
                                 <td><span class="status paid">Paid</span></td>
                             </tr>
-                            <tr>
-                                <td>Cabrera, Joel</td>
-                                <td>20,000</td>
-                                <td>16</td>
-                                <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- CHANGE PASSWORD -->
-        <!-- <div class="change-password">
+        <div class="change-password" id="change-password">
             <div class="password">
-                <form action="post">
-                    <h3>New Password</h3>
-                    <input type="text" placeholder="Insert Password">
-                    <h3>Confirm Password</h3>
-                    <input type="text" placeholder="Re-enter Password">
+                <form action="" method="POST" class="pass-form">
+                    <label for="newpassword">New Password</label>
+                    <input type="text" placeholder="New Password" name="newpassword">
+                    <label for="repassword">Re-Enter New Password</label>
+                    <input type="text" placeholder="Re-enter New Password" name="repassword">
+
+                    <button class="button" id="button">Change Password</button>
                 </form>
             </div>
-        </div> -->
+        </div>
 
     </div>
 

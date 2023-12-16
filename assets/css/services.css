@@ -131,7 +131,7 @@ nav .logo img {
 .container .box .content {
     background: #008a12b9;
     color: #ffffff;
-    padding: 5rem 8rem;
+    padding: 5rem 7rem;
     margin: 4rem;
     border-radius: 2rem;
     animation: rotate 1.5s linear;
@@ -159,8 +159,6 @@ nav .logo img {
 }
 
 .container .box .content i:hover {
-    padding: 2rem;
-    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -170,6 +168,10 @@ nav .logo img {
 
 .container .box .content .moon:hover {
     color: #f700ff;
+}
+
+.container .box .content .pay:hover {
+    color: #0400ff;
 }
 
 /* MODAL */
@@ -323,7 +325,7 @@ footer {
 
 /* RESPONSIVE */
 /* MOBILE */
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 900px) {
     nav .menu {
         height: 100vh;
         position: fixed;
@@ -431,10 +433,10 @@ footer {
     .container .box .content .header {
         padding: 2rem;
         font-size: .8rem;
-        margin-bottom: 2rem;
+        margin-bottom: .5rem;
     }
 
     .container .box .content i {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 }

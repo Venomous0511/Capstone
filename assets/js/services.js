@@ -21,7 +21,7 @@ const closeModal2 = document.getElementById('closeModal2');
 
 // Get reservation buttons
 const reservationBtn1 = document.getElementById('sunBtn');
-const reservationBtn2 = document.querySelector('.moon');
+const reservationBtn2 = document.getElementById('moonBtn');
 
 // Function to open modal
 function openModal(modal) {

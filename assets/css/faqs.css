@@ -46,6 +46,23 @@ ul {
     flex: 1;
 }
 
+#gotoTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gotoTop:hover {
+    background-color: #0056b3;
+}
+
 /* HAMBURGER MENU */
 nav .openMenu {
     font-size: 2rem;

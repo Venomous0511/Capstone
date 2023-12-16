@@ -61,14 +61,14 @@
                         <h2>Day Reservation</h2>
 
                         <label for="nameday">Name:</label>
-                        <input type="text" id="nameday" name="nameday" required>
+                        <input type="text" id="nameday" placeholder="Full Name" name="nameday" required>
 
 
                         <label for="emailday">Email: </label>
-                        <input type="email" id="emailday" name="emailday" required>
+                        <input type="email" id="emailday" placeholder="Email Address" name="emailday" required>
 
                         <label for="addressday">Address: </label>
-                        <textarea id="addressday" name="addressday" required></textarea>
+                        <textarea id="addressday" placeholder="Complete Address" name="addressday" required></textarea>
 
                         <div class="form__section-container">
                             <div class="form-section">
@@ -86,10 +86,10 @@
 
                             <div class="form-section">
                                 <label for="kidsday">Kids: </label>
-                                <input type="number" id="kidsday" name="kidsday" required>
+                                <input type="number" id="kidsday" placeholder="0" name="kidsday" required>
 
                                 <label for="adultsday">Adults: </label>
-                                <input type="number" id="adultsday" name="adultsday" required>
+                                <input type="number" id="adultsday" placeholder="0" name="adultsday" required>
                             </div>
                         </div>
 
@@ -115,14 +115,15 @@
                         <h2>Night Reservation</h2>
 
                         <label for="name-night">Name:</label>
-                        <input type="text" id="name-night" name="name-night" required>
+                        <input type="text" id="name-night" placeholder="Full Name" name="name-night" required>
 
 
                         <label for="email-night">Email: </label>
-                        <input type="email" id="email-night" name="email-night" required>
+                        <input type="email" id="email-night" placeholder="Email Address" name="email-night" required>
 
                         <label for="address-night">Address: </label>
-                        <textarea id="address-night" name="address-night" required></textarea>
+                        <textarea id="address-night" placeholder="Complete Address" name="address-night"
+                            required></textarea>
 
                         <div class="form__section-container">
                             <div class="form-section">
@@ -140,10 +141,10 @@
 
                             <div class="form-section">
                                 <label for="kids-night">Kids: </label>
-                                <input type="number" id="kids-night" name="kids-night" required>
+                                <input type="number" id="kids-night" placeholder="0" name="kids-night" required>
 
                                 <label for="adults-night">Adults: </label>
-                                <input type="number" id="adults-night" name="adults-night" required>
+                                <input type="number" id="adults-night" placeholder="0" name="adults-night" required>
                             </div>
                         </div>
 
@@ -161,6 +162,25 @@
                     Payment (Gcash)
                 </h1>
                 <i class="ri-secure-payment-line pay" id="payment"></i>
+            </div>
+            <div class="modal" id="reservationModal3">
+                <div class="modal-content">
+                    <span class="close" id="closeModal3">&times;</span>
+                    <form action="./php" method="post" class="form" id="PaymentMethod">
+                        <h2>Add Transaction</h2>
+                        <p class="subtitle">Please enter the exact amount below to complete your reservation.</p>
+
+                        <label for="pay-method">Payment Method</label>
+                        <select name="pay-method" id="pay-methods">
+                            <option value="1">Gcash</option>
+                        </select>
+
+                        <label for="Amount">Amount</label>
+                        <input type="number" id="payment-amount" name="Amount" placeholder="0.0" required>
+
+                        <input type="submit" value="Pay">
+                    </form>
+                </div>
             </div>
         </div>
     </section>

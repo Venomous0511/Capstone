@@ -192,7 +192,7 @@ nav .logo img {
 .modal-content {
     align-items: center;
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 2% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 30%;
@@ -229,6 +229,10 @@ form h2 {
 
 label {
     font-size: 1.2rem;
+}
+
+.subtitle {
+    margin-bottom: 2rem;
 }
 
 input[type="text"],
@@ -270,8 +274,9 @@ input[type="date"] {
     margin-right: 20px;
 }
 
-input[type="number"] {
-    width: 20%;
+input[type="number"],
+select {
+    width: 100%;
     text-align: center;
 }
 

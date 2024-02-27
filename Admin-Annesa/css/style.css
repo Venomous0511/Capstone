@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --body-color: #051937;
+    --background: #ffffff;
+    --btn-background: #009900;
+    --text-color: #0044ff;
+    --background-hover: #05370c;
+    --body-text: 'Poppins', sans-serif;
+    --font-size: 1rem;
+    --box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-color);
+    font-size: var(--font-size);
+    font-family: var(--body-text);
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.login-container {
+    background: var(--background);
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 0 50px;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    margin-bottom: 3rem;
+}
+
+.form-input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.icons {
+    font-size: 1.1rem;
+    margin-left: 30px;
+    color: var(--text-color);
+}
+
+.login-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.login-pic img {
+    width: 400px;
+    height: 400px;
+}
+
+.form-btn {
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    padding: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    transition: all .3s;
+    color: var(--background);
+    cursor: pointer;
+    background: var(--btn-background);
+}
+
+.btn:hover {
+    background: var(--background-hover);
+}
+
+
+@media screen and (max-width: 1460px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-form {
+        margin: 0 0 0 20px;
+    }
+
+    .form-title {
+        font-size: 1rem;
+    }
+
+    .icons {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .login-pic img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .login-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .login-form {
+        margin: 30px;
+    }
+
+    .login-pic {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        width: 300px;
+    }
+
+    .login-form {
+        margin: 0;
+    }
+}

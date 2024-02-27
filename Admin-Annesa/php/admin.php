@@ -1,14 +1,33 @@
+<?php
+    include 'connection.php';
+        // If the user is not logged in redirect to the login page...
+    if (!isset($_SESSION['loggedin'])) {
+	    header('Location: ../index.html');
+	    exit;
+    }
+
+    $sql = "SELECT * FROM bookings";
+    $result = $conn->query($sql);
+
+    $countSql = "SELECT COUNT(*) as count FROM bookings";
+    $countResult = $conn->query($countSql);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-PH">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LOCAL CSS -->
-    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css?v=<?php echo time(); ?>">
     <!-- FAV ICON -->
-    <link rel="icon" type="image/x-icon" href="./images/logo.png">
-    <title>Admin</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png" />
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <title>Welcome - Annesa Resort</title>
 </head>
 
 <div>
@@ -16,7 +35,7 @@
         <ul>
             <li>
                 <a href="#">
-                    <span class="icon"><img src="./images/logo.png" alt=""></span>
+                    <span class="icon"><img src="../assets/img/logo.png" alt=""></span>
                     <span class="title">Annesa's Resort</span>
                 </a>
             </li>
@@ -51,7 +70,7 @@
                 </a>
             </li>
             <li>
-                <a href="./logout.php">
+                <a href="../logut.php">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                     <span class="title">Sign Out</span>
                 </a>
@@ -65,6 +84,10 @@
             <div class="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
+
+            <div class="Welcome">
+                <h3>Welcome back, <?=htmlspecialchars($_SESSION['name'], ENT_QUOTES)?>!</h3>
+            </div>
         </div>
 
         <!-- DASHBOARD -->
@@ -74,18 +97,27 @@
                 <a href="">
                     <div class="card">
                         <div>
-                            <div class="numbers">80</div>
-                            <div class="cardname">Bookings</div>
+                        <?php
+                            if ($countResult) {
+                                $countRow = $countResult->fetch_assoc();
+                                $bookingCount = $countRow['count'];
+                                // Display the count
+                                    echo '
+                                        <div class="numbers">' . $bookingCount . '</div>
+                                        <div class="cardname">Bookings</div>';
+                            }
+                        ?>
                         </div>
                         <div class="iconbx">
                             <ion-icon name="bag-handle-outline"></ion-icon>
                         </div>
                     </div>
                 </a>
+
                 <a href="">
                     <div class="card">
                         <div>
-                            <div class="numbers">32</div>
+                            <div class="numbers">No Messages Yet!</div>
                             <div class="cardname">Messages</div>
                         </div>
                         <div class="iconbx">
@@ -93,11 +125,24 @@
                         </div>
                     </div>
                 </a>
+
                 <a href="">
                     <div class="card">
                         <div>
-                            <div class="numbers">₱15,000</div>
-                            <div class="cardname">Income</div>
+                        <?php
+                             $totalPaymentSql = "SELECT SUM(payment) as totalPayment FROM bookings WHERE status != 'refund'";
+                             $totalPaymentResult = $conn->query($totalPaymentSql);
+
+                             if ($totalPaymentResult) {
+                                $totalPaymentRow = $totalPaymentResult->fetch_assoc();
+                                $totalPayment = $totalPaymentRow['totalPayment'];
+                                
+                                echo '
+                                    <div class="numbers"> ₱ ' . $totalPayment . '</div>
+                                    <div class="cardname">Income</div>
+                                ';
+                            }
+                        ?>
                         </div>
                         <div class="iconbx">
                             <ion-icon name="wallet-outline"></ion-icon>
@@ -119,36 +164,20 @@
                             <td>Status</td>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>2,000</td>
-                                <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>3,000</td>
-                                <td><span class="status progress">In progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>2,500</td>
-                                <td><span class="status refund">refund</span></td>
-                            </tr>
-                            <tr>
-                                <td>Malang, Richel</td>
-                                <td>20,000</td>
-                                <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
-                            <tr>
-                                <td>Cabrera, Joel</td>
-                                <td>5,000</td>
-                                <td><span class="status paid">Paid</span></td>
-                            </tr>
-                            <tr>
-                                <td>Cabrera, Joel</td>
-                                <td>20,000</td>
-                                <td><span class="status unpaid">Unpaid</span></td>
-                            </tr>
+                            <?php
+                            // Fetch data from the database
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<tr>
+                                            <td>' . $row["clientname"] . '</td>
+                                            <td> ₱ ' . $row["payment"] . '</td>
+                                            <td><span class="status ' . strtolower(str_replace(' ', '', $row["status"])) . '">' . $row["status"] . '</span></td>
+                                        </tr>';
+                                }
+                            } else { 
+                                echo '<h1 class="nobookings">No Bookings have been detected!</h1>';
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -159,41 +188,26 @@
                         <h2>Recent Customers</h2>
                     </div>
                     <table>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Joel Cabrera<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Richel Malang<br><span>Quezon City</span></h4>
-                            </td>
-                        </tr>
+                    <?php
+                        $sql = "SELECT clientname, City FROM bookings";  
+                        $result = $conn->query($sql);
+                    
+                            // Fetch data from the database
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<tr>
+                                            <td>
+                                                <h4>' . $row["clientname"] . '
+                                                    <br>
+                                                    <span style="font-size: 14px; color: #999;">' . $row["City"] . '</span>
+                                                </h4>
+                                            </td>
+                                        </tr>';
+                                }
+                            } else { 
+                                echo '<h5>No Bookings have been detected!</h5>';
+                            }
+                            ?>
                     </table>
                 </div>
             </div>
@@ -314,22 +328,20 @@
         <!-- CHANGE PASSWORD -->
         <div class="change-password" id="change-password">
             <div class="password">
-                <form action="" method="POST" class="pass-form">
+                <!-- <form action="" method="POST" class="pass-form">
                     <label for="newpassword">New Password</label>
-                    <input type="text" placeholder="New Password" name="newpassword">
+                    <input type="text" name="newpassword" placeholder="New Password" >
                     <label for="repassword">Re-Enter New Password</label>
-                    <input type="text" placeholder="Re-enter New Password" name="repassword">
+                    <input type="text" name="repassword" placeholder="Re-enter New Password" >
 
                     <button class="button" id="button">Change Password</button>
-                </form>
+                </form> -->
             </div>
         </div>
 
     </div>
 
-    <script src="./js/admin.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
     </body>
 
 </html>

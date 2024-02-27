@@ -1,7 +1,7 @@
 //menu toggle
-let toggle = document.querySelector('.toggle');
-let navigation = document.querySelector('.navigation');
-let main = document.querySelector('.main');
+const toggle = document.querySelector('.toggle');
+const navigation = document.querySelector('.navigation');
+const main = document.querySelector('.main');
 
 toggle.onclick = function () {
     navigation.classList.toggle('active');
@@ -9,7 +9,7 @@ toggle.onclick = function () {
 }
 
 // add hovered class in selected items
-let list = document.querySelectorAll('.navigation li');
+const list = document.querySelectorAll('.navigation li');
 function activeLink() {
     list.forEach((item) =>
         item.classList.remove('hovered'));

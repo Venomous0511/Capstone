@@ -170,6 +170,12 @@ a {
     padding: 0 10px;
 }
 
+.Welcome h3 {
+    color: var(--black1);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* background menubar */
 .toggle {
     position: relative;
@@ -279,7 +285,6 @@ a {
 
 .details .recentbookings {
     position: relative;
-    display: grid;
     min-height: 500px;
     background: var(--white);
     padding: 20px;
@@ -311,7 +316,7 @@ a {
 .details table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .details table thead td {
@@ -344,15 +349,6 @@ a {
     text-align: center;
 }
 
-.status.progress {
-    padding: 2px 4px;
-    background: #b7d608;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .status.paid {
     padding: 2px 4px;
     background: #8de02c;
@@ -383,13 +379,16 @@ a {
 /* New Customers */
 .recentCustomers {
     position: relative;
-    display: grid;
-    padding: 22px;
+    padding: 40px;
     background: var(--white);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border: 1px solid #000;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.recentCustomers table {
+    scroll-behavior: smooth;
 }
 
 .recentCustomers table tr td {
@@ -402,17 +401,12 @@ a {
     line-height: 1.2em;
 }
 
-.recentCustomers table tr td h4 span {
-    font-size: 14px;
-    color: var(--black2);
-}
-
 .recentCustomers table tr:hover {
     background: var(--blue);
     color: var(--white);
 }
 
-.recentCustomers table tr:hover td h4 span {
+.recentCustomers table tr:hover td h4 {
     color: var(--white);
 }
 

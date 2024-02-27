@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    /> -->
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/remixicon.css" />
+
+    <title>Annesa Resort - Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-container">
+        <form action="./php/auth.php" method="POST" class="login-form">
+          <h1 class="form-title">Admin Login</h1>
+          <div class="form-input">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              class="input"
+              autofocus
+              autocomplete="username"
+              required
+            />
+            <label for="username">
+              <i class="ri-mail-fill icons"></i>
+            </label>
+          </div>
+          <div class="form-input">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="input"
+              required
+            />
+            <label for="password">
+              <i class="ri-lock-fill icons"></i>
+            </label>
+          </div>
+
+          <div class="form-btn">
+            <input type="submit" value="Login" class="btn" />
+          </div>
+        </form>
+        <div class="login-pic">
+          <img src="./assets/img/login.svg" alt="Login Image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -491,7 +491,7 @@ a {
 /* CHANGE PASSWORD */
 .password {
     position: relative;
-    width: 50%;
+    width: 100%;
     padding: 40px;
     background: var(--white);
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -508,9 +508,14 @@ a {
     align-items: center;
 }
 
+.pass-form label {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .pass-form label,
 input {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .pass-form label {
@@ -518,20 +523,27 @@ input {
 }
 
 .pass-form input {
-    width: 70%;
+    width: 30%;
     height: 40px;
     border-radius: 20px;
     text-align: center;
     background: #ccc;
+    color: #000;
     border: none;
 }
 
 .pass-form .button {
     margin-top: 30px;
     padding: 10px;
-    border-radius: 10px;
     cursor: pointer;
     border: none;
+    color: var(--white);
+    background: var(--black2);
+    transition: all .3s ease-in-out;
+}
+
+.pass-form .button:hover {
+    background: var(--black1);
 }
 
 /* Responsive admin */
@@ -602,5 +614,9 @@ input {
         right: 0;
         left: initial;
         color: white;
+    }
+
+    .pass-form input {
+        width: 100%;
     }
 }

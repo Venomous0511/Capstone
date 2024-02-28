@@ -290,7 +290,7 @@
                         <thead>
                             <td>Name</td>
                             <td>Payment</td>
-                            <td>No. of Customers</td>
+                            <td>No. Pax</td>
                             <td>Status</td>
                         </thead>
 
@@ -328,14 +328,12 @@
         <!-- CHANGE PASSWORD -->
         <div class="change-password" id="change-password">
             <div class="password">
-                <!-- <form action="" method="POST" class="pass-form">
-                    <label for="newpassword">New Password</label>
-                    <input type="text" name="newpassword" placeholder="New Password" >
-                    <label for="repassword">Re-Enter New Password</label>
-                    <input type="text" name="repassword" placeholder="Re-enter New Password" >
+                <form action="./changepassword.php" method="POST" class="pass-form">
+                    <label for="newpwd">New Password</label>
+                    <input type="text" name="newpwd" placeholder="Enter new pasword" >
 
                     <button class="button" id="button">Change Password</button>
-                </form> -->
+                </form>
             </div>
         </div>
 

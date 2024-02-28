@@ -26,13 +26,13 @@
                 header('Location: ./admin.php');
             }else {
                 echo "<title>Alert</title>";
-                echo "<p>Wrong username and/or password</p>"; 
-                echo "<a href=../index.html>Go back</a>"; 
+                echo "<h1>Wrong username and/or password</h1>"; 
+                echo "<a href=../index.html>< Go back</a>"; 
             }
         } else {
             echo "<title>Alert</title>";
-            echo "<p>Wrong username and/or password</p>"; 
-            echo "<a href=../index.html>Go back</a>"; 
+            echo "<h1>Wrong username and/or password</h1>"; 
+            echo "<a href=../index.html>< Go back</a>"; 
         }
 
         $stmt->close();

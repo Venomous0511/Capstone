@@ -1,0 +1,342 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+/* MODIFIER */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    background-color: hsl(207, 4%, 15%);
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: hsl(207, 4%, 25%);
+    border-radius: 2rem;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(207, 4%, 65%);
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    flex: 1;
+}
+
+#gotoTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gotoTop:hover {
+    background-color: #0056b3;
+}
+
+/* HAMBURGER MENU */
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+nav .closeMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background: linear-gradient(rgb(47, 47, 185), green);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav .logo {
+    display: inline-flex;
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #00fff2;
+    margin: 0 3rem;
+}
+
+nav .logo .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu li {
+    background: rgb(1, 145, 1);
+    display: inline-flex;
+    margin: 2px;
+    transform: skewX(-25deg);
+    padding: 8px;
+}
+
+.menu li:hover {
+    background: rgb(0, 204, 255);
+}
+
+.menu li .main-menu {
+    transform: skewX(25deg);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
+    padding: 1rem 2rem;
+}
+
+.menu .main-menu:hover {
+    color: #000000;
+}
+
+/* card container */
+
+.sides {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.maincontainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-style: ridge;
+    border-color: aqua;
+    border-radius: 20px;
+    justify-content: center;
+    width: 320px;
+    height: 400px;
+    margin: 1rem;
+}
+
+/* card form */
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    cursor: cell;
+}
+
+/* flip click function */
+
+.card-clicked {
+    transform: rotateY(180deg);
+}
+
+/* front face card */
+
+.front {
+    text-transform: capitalize;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fbff20a2;
+    color: #333;
+}
+
+/* back face card */
+
+.back {
+    text-transform: capitalize;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgba(172, 255, 47, 0.671);
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+/* front text card */
+
+.front h1 {
+    font-family: 'Nova Square', cursive;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* back text card */
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(rgb(47, 47, 185), green);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+/* MOBILE */
+@media screen and (max-width: 875px) {
+    nav .menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top .5s ease;
+        background: #02008b;
+        opacity: .8;
+        display: none;
+    }
+
+    nav .menu li {
+        background: none;
+        transform: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    .menu li:first-child {
+        border-top: 2px solid #ffffff;
+    }
+
+    nav .menu li:hover {
+        background: none;
+    }
+
+    nav .menu li .main-menu {
+        font-size: 2rem;
+        color: #ffffff;
+        transform: none;
+    }
+
+    nav .menu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .logo {
+        margin: .1rem;
+    }
+
+    nav .logo .logo-container h1 {
+        font-size: 1rem;
+    }
+
+    nav .logo .logo-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header {
+        margin: 0;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
+    .swiper-container {
+        max-width: 300px;
+    }
+
+    .swiper-slide img {
+        height: 300px;
+    }
+}
+
+/* LAPTOP */
+@media screen and (max-width: 1440px) {
+    nav .logo {
+        margin: 0;
+    }
+
+    nav .logo .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu li .main-menu {
+        font-size: .8rem;
+        padding: .2rem .8rem;
+    }
+
+    .swiper-container {
+        max-width: 500px;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+    }
+}

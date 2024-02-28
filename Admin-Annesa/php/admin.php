@@ -54,13 +54,13 @@
             <li onclick="showMessages()">
                 <a href="#">
                     <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
-                    <span class="title">Messages</span>
+                    <span class="title">Messages (under maintenance)</span>
                 </a>
             </li>
             <li onclick="showRecords()">
                 <a href="#">
                     <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
-                    <span class="title">Records</span>
+                    <span class="title">Records (under maintenance)</span>
                 </a>
             </li>
             <li onclick="showPassword()">
@@ -226,21 +226,40 @@
                         <th>ADDRESS</th>
                         <th>AMOUNT</th>
                     </tr>
-                    <tr>
-                        <td>Richel Malang</td>
-                        <td><span>Quezon City</span></td>
-                        <td id="subtotal">2000</td>
-                    </tr>
-                    <tr>
-                        <td>Richel Malang</td>
-                        <td><span>Quezon City</span></td>
-                        <td id="subtotal">2000</td>
-                    </tr>
-
+                    <?php
+                            $sql = "SELECT clientname, City, payment FROM bookings WHERE status != 'refund'";  
+                            $result = $conn->query($sql);
+                            // Fetch data from the database
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<tr>
+                                            <td>' . $row["clientname"] . '</td>
+                                            <td>' . $row["City"] . '</td>
+                                            <td> ₱ ' . $row["payment"] . '</td>
+                                        </tr>';
+                                }
+                            } else { 
+                                echo '<h1 class="nobookings">No Bookings have been detected!</h1>';
+                            }
+                            ?>
                 </table>
 
                 <div class="total-container">
-                    <h4>Total: <span class="total">₱</span></h4>
+                    <h4>Total: 
+                    <?php
+                             $totalPaymentSql = "SELECT SUM(payment) as totalPayment FROM bookings WHERE status != 'refund'";
+                             $totalPaymentResult = $conn->query($totalPaymentSql);
+
+                             if ($totalPaymentResult) {
+                                $totalPaymentRow = $totalPaymentResult->fetch_assoc();
+                                $totalPayment = $totalPaymentRow['totalPayment'];
+                                
+                                echo '
+                                    <span class="total"> ₱ ' . $totalPayment . '</span>
+                                ';
+                            }
+                        ?>
+                    </h4>
                 </div>
             </div>
         </div>

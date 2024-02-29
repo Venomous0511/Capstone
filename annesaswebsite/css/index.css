@@ -100,7 +100,7 @@ nav ul .nav-link {
 }
 
 /* VIDEO */
-.image video {
+.video-container video {
     object-fit: cover;
     height: 100vh;
     width: 100%;
@@ -222,10 +222,7 @@ nav ul .nav-link {
     color: var(--hcolor);
 }
 
-
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,25 +233,4 @@ nav ul .nav-link {
     width: 100%;
     height: 500px;
     object-fit: cover;
-}
-
-.page {
-    color: var(--tcolor);
-}
-
-.append-buttons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.append-buttons button {
-    display: inline-block;
-    cursor: pointer;
-    border: 1px solid var(--hcolor);
-    color: var(--hcolor);
-    text-decoration: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin: 0 10px;
-    font-size: 13px;
 }

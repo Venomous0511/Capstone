@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* MODIFICATION */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --bcolor: #EEEEEE;
     --bgcolor1: #0216D0;
     --bgcolor2: #00770a6e;
@@ -19,12 +19,12 @@
     --tfont: 'Josephin Sans', sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     background-color: grey;
     width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 50px;
 }
@@ -33,7 +33,7 @@
     background-color: #242424;
 }
 
-body{
+body {
     font-family: var(--tfont);
     background: var(--bcolor);
 }
@@ -66,15 +66,15 @@ nav h1 {
     color: var(--tcolor);
     text-transform: uppercase;
 }
- 
+
 .nav-link {
-     transition: all .3s ease-in;
-     font-size: 20px;
+    transition: all .3s ease-in;
+    font-size: 20px;
 }
- 
-.nav-link:hover{
+
+.nav-link:hover {
     color: var(--bgcolor4);
- }
+}
 
 nav ul .nav-link {
     margin: 0 30px;
@@ -140,12 +140,16 @@ nav ul .nav-link {
     border-top-right-radius: 20px;
 }
 
-.entrance, .cottages, .rooms {
+.entrance,
+.cottages,
+.rooms {
     border: 1px solid #000;
     border-radius: 20px
 }
 
-.entrance h6, .cottages h6, .rooms h6 {
+.entrance h6,
+.cottages h6,
+.rooms h6 {
     padding: 10px 0;
     font-size: 1.1rem;
 }
@@ -156,7 +160,7 @@ nav ul .nav-link {
     margin-top: 10px;
 }
 
-.rates table thead th{
+.rates table thead th {
     padding: 10px 0;
     text-transform: uppercase;
     font-weight: 600;

@@ -10,8 +10,9 @@
 :root{
     --bcolor: #EEEEEE;
     --bgcolor1: #0216D0;
-    --bgcolor2: #00770a4b;
+    --bgcolor2: #00770a6e;
     --bgcolor3: #096d00;
+    --bgcolor4: #ffee00;
     --tcolor: #EEEEEE;
     --tcolor1: #000000;
     --hcolor: #0216D0;
@@ -51,7 +52,7 @@ a {
 
 /* NAVIGATION */
 nav {
-    padding: 30px 200px;
+    padding: 15px 200px;
     background: var(--bgcolor2);
     width: 100%;
     position: fixed;
@@ -68,11 +69,11 @@ nav h1 {
  
 .nav-link {
      transition: all .3s ease-in;
-     font-size: 18px;
+     font-size: 20px;
 }
  
 .nav-link:hover{
-    color: var(--hcolor);
+    color: var(--bgcolor4);
  }
 
 nav ul .nav-link {
@@ -83,7 +84,7 @@ nav ul .nav-link {
     background: var(--bgcolor3);
     border-radius: 50px;
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
 }
 

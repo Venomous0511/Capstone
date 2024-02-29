@@ -6,6 +6,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <title>Annesa's Resort</title>
   </head>
@@ -22,11 +26,9 @@
       </ul>
     </nav>
 
-    <section>
-      <div class="image">
-        <video src="assets/video/1.mp4" autoplay muted loop>
-      </div>
-    </section>
+    <div class="image">
+      <video src="assets/video/1.mp4" autoplay muted loop>
+    </div>
     
     <section>
       <div class="announcement-cont">
@@ -57,7 +59,7 @@
             <table>
               <thead>
                 <th>Entrance</th>
-                <th>Time</>
+                <th>Time</th>
                 <th>Prices</th>
               </thead>
               <tbody>
@@ -101,7 +103,7 @@
               <thead>
                 <th>Cottages / Table Location</th>
                 <th>Maximum Capacity</th>
-                <th>Price</t>
+                <th>Price</th>
               </thead>
               <tbody>
                 <tr>
@@ -119,32 +121,38 @@
                   <td>₱ 200.00</td>
                 </tr>
                 <tr>
-                  <td>Bamboo Cottage 1&2</td>
+                  <td>Bamboo Cottage - 1 & 2</td>
                   <td>12 PAX</td>
                   <td>₱ 800.00</td>
                 </tr>
                 <tr>
-                  <td>Family Cottage 3,4&5</td>
+                  <td>Family Cottage - 3, 4 & 5</td>
                   <td>20 PAX</td>
                   <td>₱ 1,200.00</td>
                 </tr>
                 <tr>
-                  <td>Regular Cottage 6&7</td>
+                  <td>Regular Cottage - 6 & 7</td>
                   <td>12 PAX</td>
                   <td>₱ 800.00</td>
                 </tr>
                 <tr>
-                  <td>Cottage in Tisya(1st Floor)</td>
+                  <td>Cottage in Tisya <br>
+                    (1st Floor)
+                  </td>
                   <td>35 PAX</td>
                   <td>₱ 1,800.00</td>
                 </tr>
                 <tr>
-                  <td>Cottage in Tisya(2nd Floor)</td>
+                  <td>Cottage in Tisya <br>
+                    (2nd Floor)
+                  </td>
                   <td>110 PAX</td>
                   <td>₱ 3,000.00</td>
                 </tr>
                 <tr>
-                  <td>Timothy, Tiffany, Trizh, Troy</td>
+                  <td>Timothy, Tiffany, <br>
+                      Trizh, Troy
+                    </td>
                   <td>18 PAX</td>
                   <td>₱ 1,000.00</td>
                 </tr>
@@ -165,39 +173,50 @@
              </thead>
              <tbody>
               <tr>
-                <td>1 to 6(3 PAX)</td>
+                <td>Rm. 1 to 6 <br>
+                  (3 PAX)
+                </td>
                 <td>₱ 380.00</td>
                 <td>₱ 1,200.00</td>
                 <td>₱ 2,400.00</td>
               </tr>
               <tr>
-                <td>7(5 PAX)</td>
+                <td>Rm. 7 <br>
+                  (5 PAX)
+                </td>
                 <td>₱ 500.00</td>
                 <td>₱ 1,400.00</td>
                 <td>₱ 2,800.00</td>
               </tr>
               <tr>
-                <td>8(12 PAX)</td>
+                <td>Rm. 8 <br>
+                  (12 PAX)
+                </td>
                 <td>₱ 1,200.00</td>
                 <td>₱ 3,500.00</td>
                 <td>₱ 4,800.00</td>
               </tr>
               <tr>
-                <td>9(5 PAX)</td>
+                <td>Rm. 9 <br>
+                  (5 PAX)
+                </td>
                 <td>₱ 580.00</td>
                 <td>₱ 1,480.00</td>
                 <td>₱ 2,480.00</td>
               </tr>
               <tr>
-                <td>10(3 PAX) Fan Only</td>
+                <td>Rm. 10 <br>
+                  (3 PAX) - Fan Only
+                </td>
                 <td>₱ 250.00</td>
                 <td>₱ 1,000.00</td>
                 <td>₱ 2,000.00</td>
               </tr>
              </tbody>
             </table>
-            <h6>Notes: Additional ₱100.00/Extended Hours,Person-excess,Extra Belongings</h6>
-            <h6>Except Room#8 ₱200.00/Extended Hours</h6>
+            <h6>Notes:</h6>
+            <h6>Additional ₱100.00/ Extended Hours, Person-excess, Extra Belongings</h6>
+            <h6>Except Room#8 ₱200.00/ Extended Hours</h6>
           </div>
         </div>
       </div>
@@ -209,7 +228,50 @@
           Gallery
         </h2>
 
-        <span>Check us out here!</span>
+        <div #swiperRef="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/1.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/2.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/3.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/4.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/5.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/6.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/7.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/8.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/9.jpg" alt="gallery">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/gallery/10.jpg" alt="gallery">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination page"></div>
+        </div>
+
+        <p class="append-buttons">
+          <button class="prepend-2-slides">Prepend 2 Slides</button>
+          <button class="prepend-slide">Prepend Slide</button>
+          <button class="append-slide">Append Slide</button>
+          <button class="append-2-slides">Append 2 Slides</button>
+        </p>
       </div>
     </section>
 
@@ -237,5 +299,9 @@
       <h2>Footer</h2>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eum, odio labore error nam harum dolorem accusantium distinctio eos dignissimos sit exercitationem beatae ipsa omnis facere, ipsam commodi repellat consequuntur.
     </Footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

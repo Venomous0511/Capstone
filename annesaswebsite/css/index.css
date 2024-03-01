@@ -107,6 +107,45 @@ nav ul .nav-link {
     z-index: 1;
 }
 
+/* ANNOUNCEMENT */
+.announcement-cont {
+    margin: 30px 200px;
+}
+
+.ri-rfid-line {
+    font-size: 60px;
+    color: #ffee00;
+}
+
+.announcement-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 10px;
+    text-transform: uppercase;
+    color: var(--tcolor);
+    background: var(--bgcolor3);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50px;
+}
+
+.anouncement {
+    border: 1px solid;
+    padding: 20px;
+}
+
+.anouncement h3 {
+    text-align: center;
+}
+
+.anouncement p {
+    margin-top: 20px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
 /* RATES */
 .rates-container {
     display: flex;
